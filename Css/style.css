@@ -39,3 +39,49 @@
       padding: 10px;
       margin-top: 30px;
     }
+
+    /* ...existing code... */
+
+/* Responsive styles */
+@media (max-width: 991px) {
+  .sidebar {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+  .header img {
+    max-height: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding: 10px;
+    font-size: 1.1rem;
+  }
+  .header img {
+    max-height: 40px;
+  }
+  .sidebar {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+  .announcement {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+  .footer {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Make images and containers flexible */
+img, .header, .sidebar, .announcement, .footer {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+

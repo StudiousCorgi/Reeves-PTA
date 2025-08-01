@@ -114,18 +114,84 @@
                 <br>
                 <a> <b>214 Saint Augustine Dr, Long Beach, MS, 39560</b> </a>
 
-
-                </h5>
             </div>
         </div>
     </div>
 
+    <!-- Login/Signup Modal -->
+<div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="authModalLabel">Sign In / Request Access</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="authForm">
+          <div class="mb-3">
+            <label for="authEmail" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="authEmail" required>
+          </div>
+          <div class="mb-3">
+            <label for="authPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="authPassword" required>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Log In</button>
+          <hr>
+          <button type="button" class="btn btn-outline-secondary w-100 mt-2" data-bs-toggle="collapse" data-bs-target="#signupRequest">Request Sign Up</button>
+        </form>
+
+        <div class="collapse mt-3" id="signupRequest">
+          <form id="signupForm">
+            <div class="mb-2">
+              <label for="signupName" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="signupName" required>
+            </div>
+            <div class="mb-2">
+              <label for="signupEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="signupEmail" required>
+            </div>
+            <div class="mb-2">
+              <label for="signupReason" class="form-label">Why are you signing up?</label>
+              <textarea class="form-control" id="signupReason" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Submit Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Parent Corner Section -->
+<div class="container my-5">
+  <h2>Parent Questions & Suggestions</h2>
+  <p>Have a concern or suggestion for the PTA? Let us know below:</p>
+  <form id="parentForm">
+    <div class="mb-3">
+      <label for="parentName" class="form-label">Your Name</label>
+      <input type="text" class="form-control" id="parentName" required>
+    </div>
+    <div class="mb-3">
+      <label for="parentEmail" class="form-label">Your Email</label>
+      <input type="email" class="form-control" id="parentEmail" required>
+    </div>
+    <div class="mb-3">
+      <label for="parentMessage" class="form-label">Message</label>
+      <textarea class="form-control" id="parentMessage" rows="4" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-maroon">Send Message</button>
+  </form>
+</div>
     <!-- Footer -->
     <div class="footer">
         <p>&copy; 2025 Long Beach PTA. All rights reserved.</p>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="./script.js"></script>
+
 </body>
 
 </html>
